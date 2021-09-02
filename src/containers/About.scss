@@ -1,0 +1,223 @@
+// Reason why `!important` needs to be included:
+//https://stackoverflow.com/questions/58070076/how-to-import-ant-design-components-without-default-class-names
+
+// About.scss
+.header-bar {
+  background-color: #FAEEDC !important;
+  color: black !important;
+
+.footer {
+  background-color: #FAEEDC !important;
+  color: black !important;
+  text-align: left !important;
+}
+  .header-bar-logo {
+    color: #FAEEDC !important;
+    text-align: left !important;
+    float: left;
+  }
+
+  .header-bar-title {
+    margin-left: 2.2em;
+    padding-top: 10px !important;
+  }
+
+  .header-bar-menu {
+    text-align: right;
+    padding-right: 6.1em;
+
+    .bsa-button {
+      margin-left: 15px !important;
+    }
+
+    .newsletter-button {
+      margin-left: 15px  !important;
+    }
+    .fb-icon {
+      margin-left: 15px  !important;
+    }
+    .twitter-icon {
+      margin-left: 15px  !important;
+    }
+     .yt-icon {
+      margin-left: 15px  !important;
+    }
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  // TODO: Implement flex grow/shrink/basis here
+  padding-top: 100px;
+  padding-bottom: 20px;
+  color: black !important;
+
+  .summary-content {
+    width: 500px;
+    text-align: center;
+
+    .summary-text {
+      padding: 20px;
+    }
+
+    .get-started-button {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .summary-image {
+    padding: 40px;
+    height: 400px;
+    min-width: 200px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.newsletter-heading{
+  width: 800px !important;
+  text-align: center !important;
+  padding-top: 3em !important;
+  color: black !important;
+
+}
+
+
+
+.building-bsa-heading {
+  text-align: center !important;
+  padding-top: 5em !important;
+  color: black !important;
+}
+
+.building-bsa-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black !important;
+
+  .building-bsa-text {
+    //flex-grow: 5;
+    width: 500px;
+    padding: 10px 0px;
+  }
+
+  .building-bsa-image {
+    //flex-grow: 4;
+    padding: 40px 0px;
+    height: 500px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.founders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black !important;
+  text-align: left;
+
+  .duffy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+
+    .duffy-image {
+      padding: 40px 0px;
+      width: 40%;
+      max-width: 300px;
+      min-width: 200px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .duffy-text-content {
+      min-width: 300px;
+      width: 60%;
+      padding: 40px;
+    }
+
+  }
+
+  .neeraj {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+
+    .neeraj-image {
+      padding: 40px 0px;
+      width: 40%;
+      min-width: 200px;
+      max-width: 300px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .neeraj-text-content {
+      min-width: 300px;
+      width: 60%;
+      padding: 40px;
+    }
+
+  }
+  .abdullah {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+
+    .abdullah-image {
+      padding: 40px 0px;
+      width: 40%;
+      min-width: 200px;
+      max-width: 300px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .abdullah-text-content {
+      min-width: 300px;
+      width: 60%;
+      padding: 40px;
+    }
+
+    .abdullah-button{
+      background: '#faeedc'
+    }
+  }
+}
+.donate-content {
+  align-items: center;
+  justify-content: space-evenly;
+  color: black !important;
+}

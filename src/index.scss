@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ant-layout {
+  min-height: 100vh !important;
+}
+
+.ant-layout-footer {
+  //color: rgba(255, 0, 0);
+  font-size: 14px;
+  background: #fff !important;
+  padding: 40px !important;
+  margin-top: 30px;
+}
+
+.ant-layout-sider-children .ant-menu-root  {
+max-height: 100vh;
+overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+.ant-layout-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 1px solid #E0DFDF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:vertical {
+  -webkit-border-radius: 10px;
+  border-radius: 6px;
+  /*background: #E0DFDF;*/
+  width: 10px;
+  /*background: url('images/scrollbar-thumb-horizontal.png') 0;*/
+  background: #cccccc80;
+}
+
+
+
+
+  ::-webkit-scrollbar-thumb:vertical:hover {
+      background: #cccccc;
+  }
+
+::-webkit-scrollbar-thumb:horizontal {
+  -webkit-border-radius: 10px;
+  border-radius: 6px;
+  /*background: #E0DFDF;*/
+  width: 10px;
+  /*background: url('images/scrollbar-thumb-vertical.png') 0;*/
+  background: #cccccc80;
+}
+
+  ::-webkit-scrollbar-thumb:horizontal:hover {
+      background: #cccccc;
+  }
+.ant-layout-sider-collapsed{
+  width: 0px !important;
+  min-width: 0px !important;
+}
+.ant-layout-sider{
+  z-index: 999 !important;
+}
+
+  @media screen and (max-width: 768px) {
+  .header-bar .header-bar-title {
+    margin-left: 10px !important;
+    padding-top: 10px !important;
+    font-size: 16px !important;
+}
+.ant-layout-header {
+  height: 64px;
+  padding: 0 10px !important;
+  line-height: 1.2px !important;
+}
+.header-bar .header-bar-menu {
+  padding-right: 10px !important;
+}
+.header-bar .header-bar-menu .bsa-button {
+  margin-left: 15px !important;
+  font-size: 12px;
+  padding: 5px;
+  line-height: 1;
+}
+.header-bar .header-bar-menu .newsletter-button {
+  margin-left: 0px !important;
+  font-size: 12px !important;
+  padding: 5px !important;
+}
+.MuiButton-textSizeLarge {
+  padding: 5px !important;
+  font-size: 12px !important;
+}
+.ant-layout-content{
+  margin: 60px 1em !important;
+}
+.ant-layout{
+  margin-left: 0px !important;
+}
+.ant-layout-sider{
+  max-width: 200px;
+  min-width: 200px;
+  width: 200px;
+}
+.ant-layout-content{
+  padding: 0 !important;
+}
+.header-bar .header-bar-logo {
+  color: #FAEEDC !important;
+  text-align: left !important;
+  float: unset !important;
+}
+.header-bar .header-bar-menu {
+  text-align: center !important;
+}
+}

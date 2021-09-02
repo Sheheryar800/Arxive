@@ -1,0 +1,33 @@
+.togglerBtn{
+    display: none !important;
+}
+.siderCSS{
+    width: 400px !important;
+    max-width: 400 !important;
+}
+/* .ant-layout-sider{
+    display: block !important;
+} */
+@media screen and (max-width: 770px){
+    .header-bar-logo{
+        margin-top: 18px;
+        margin-bottom: -20px;
+        margin-left: 40px;
+    }
+    .header-bar{
+        height: 80px !important;
+    }
+    .ant-layout-header {
+        line-height: 24.2px !important;
+    }
+    .togglerBtn{
+        display: block !important;
+    }
+    /* .trigger{
+        display: none !important;
+    } */
+    .siderCSS{
+        width: 300px !important;
+        max-width: 300 !important;
+    }
+}

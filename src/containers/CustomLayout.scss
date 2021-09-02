@@ -1,0 +1,33 @@
+.header-bar {
+    background-color: #FAEEDC !important;
+    color: black !important;
+  
+    .header-bar-logo {
+      color: #FAEEDC !important;
+      text-align: left !important;
+      float: left !important;
+    }
+  
+    .header-bar-title {
+      margin-left: 2.2em !important;
+      padding-top: 500px !important;
+    }
+  
+    .header-bar-menu {
+      text-align: right !important;
+      padding-right: 6.1em !important;
+  
+      .bsa-button {
+        margin-left: 15px !important;
+      }
+  
+      .newsletter-button {
+        margin-left: 15px  !important;
+      }
+    }
+  }
+
+.bsa {
+  margin-top: 60px  !important;
+
+}
