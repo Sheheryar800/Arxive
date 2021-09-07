@@ -27,8 +27,8 @@ class About extends Component {
 
     async componentDidMount() {
 
-      const url = 'https://bsa-web.herokuapp.com/getRandomArtical';
-      // const url = 'http://127.0.0.1:8000/getRandomArtical';
+      // const url = 'https://bsa-web.herokuapp.com/getRandomArtical';
+      const url = 'http://127.0.0.1:8050/getRandomArtical';
       const response = await fetch(url , {
       method: 'GET',
       headers: {

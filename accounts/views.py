@@ -308,7 +308,7 @@ def getRandomCat():
     category_obj = Categories.objects.order_by('?')[0]
 
     print("cat",category_obj.category)
-    articles = Articles.objects.filter(category__id=category_obj.id).order_by('-date').values()
+    articles = Articles.objects.filter(category__id=category_obj.id).order_by('-date')[:5].values()
     return articles
 @csrf_exempt
 def getRandomArtical(request):

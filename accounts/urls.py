@@ -7,6 +7,7 @@ urlpatterns = [
 	path('login/', views.loginPage, name="login"),  
 	path('logout/', views.logoutUser, name="logout"),
 
+	path('', views.home, name="home"),
 	path('B.S.A./', views.home, name="home"),
 	path('get_articles', views.get_articles, name="get_articles"),
 	path('getRandomArtical', views.getRandomArtical, name="getRandomArtical"),

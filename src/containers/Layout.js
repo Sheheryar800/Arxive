@@ -54,6 +54,7 @@ class CustomLayout extends Component {
         width: 0, 
         height: 0,
         sidBarWidth:400,
+        layoutMarginTop:{marginTop:'65px'},
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -78,8 +79,8 @@ class CustomLayout extends Component {
     } 
     console.log('dateArray',dateArray)
 
-    const url = 'https://bsa-web.herokuapp.com/get_stored_categories';
-    // const url = 'http://127.0.0.1:8000/get_stored_categories';
+    // const url = 'https://bsa-web.herokuapp.com/get_stored_categories';
+    const url = 'http://127.0.0.1:8050/get_stored_categories';
     const response = await fetch(url , {
     method: 'GET',
     headers: {
@@ -108,11 +109,13 @@ class CustomLayout extends Component {
     if( this.state.width <= 770 ){
       this.setState({
         collapsed: !this.state.collapsed,
+        layoutMarginTop:{marginTop:'80px'},
       });
       console.log("lesser");
     }else{
       this.setState({
         collapsed: this.state.collapsed,
+        layoutMarginTop:{marginTop:'65px'},
       });
       console.log("greater");
     }
@@ -146,8 +149,8 @@ class CustomLayout extends Component {
       recent:'true',
       date:''
     }
-     const url = 'https://bsa-web.herokuapp.com/get_articles';
-    // const url = 'http://127.0.0.1:8000/get_articles';
+    //  const url = 'https://bsa-web.herokuapp.com/get_articles';
+    const url = 'http://127.0.0.1:8050/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -199,8 +202,8 @@ class CustomLayout extends Component {
       recent:'false',
       date:this.state.selectedDate
     }
-    const url = 'https://bsa-web.herokuapp.com/get_articles';
-    // const url = 'http://127.0.0.1:8000/get_articles';
+    // const url = 'https://bsa-web.herokuapp.com/get_articles';
+    const url = 'http://127.0.0.1:8050/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -234,8 +237,8 @@ class CustomLayout extends Component {
   search(event){
      var searchQuery = this.state.qState
 
-     const url = `https://bsa-web.herokuapp.com/get_search/${searchQuery}`;
-    //  const url = `http://127.0.0.1:8000/get_search/${searchQuery}`;
+    //  const url = `https://bsa-web.herokuapp.com/get_search/${searchQuery}`;
+     const url = `http://127.0.0.1:8050/get_search/${searchQuery}`;
         fetch(url , {
           method: 'GET',
           headers: {
@@ -275,7 +278,7 @@ class CustomLayout extends Component {
 
   //    console.log("api call will here");
 
-  //     const url = `http://127.0.0.1:8000/get_search/${searchQuery}`;
+  //     const url = `http://127.0.0.1:8050/get_search/${searchQuery}`;
   //     fetch(url , {
   //       method: 'GET',
   //       headers: {
@@ -307,8 +310,8 @@ class CustomLayout extends Component {
 
   async onFinish (values) {
     console.log(values);
-    const url = 'https://bsa-web.herokuapp.com/store_email';
-    // const url = 'http://127.0.0.1:8000/store_email';
+    // const url = 'https://bsa-web.herokuapp.com/store_email';
+    const url = 'http://127.0.0.1:8050/store_email';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -341,7 +344,7 @@ class CustomLayout extends Component {
     }
   render() {
     const { text } = this.state;
-    const{ temp_articles,articles, articleData , dateArray,sidBarWidth} = this.state ;
+    const{ temp_articles,articles, articleData , dateArray,sidBarWidth , layoutMarginTop} = this.state ;
     const resume = articles.map((items, i) => {
       return (
          <SubMenu title={items[0]}>
@@ -403,7 +406,7 @@ class CustomLayout extends Component {
           </Button>
           </div>
       </Header>
-      <Layout className='bsa' style={{marginTop:'60px',}}>
+      <Layout className='bsa ' style={layoutMarginTop} >
       <Sider className="sider siderCSS"  trigger={null} collapsible collapsed={this.state.collapsed} width={sidBarWidth}
             style={{
               overflow: 'auto',
@@ -413,7 +416,7 @@ class CustomLayout extends Component {
             }}
         className="site-layout-background">
            <input
-           style={{width:'400px'}}
+              style={{width:'400px'}}
               name="fname"
               type="text"
               value={this.state.qState}

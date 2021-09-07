@@ -12,8 +12,8 @@ from pathlib import Path
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
@@ -29,10 +29,10 @@ SECRET_KEY = 'cz=&%f*9(d*zo$_55p=(p)(eki#p$pb^0159-)8k^6$9c3l&_b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ['https://bytesizearxiv.org', 'http://bytesizearxiv.org', 'bsa-web.herokuapp.com', '127.0.0.1',
-                 '127.0.0.1:8000', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
+# ALLOWED_HOSTS = ['https://bytesizearxiv.org', 'http://bytesizearxiv.org', 'bsa-web.herokuapp.com', '127.0.0.1',
+#                  '127.0.0.1:8000', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
 
 # Application definition
 
@@ -64,8 +64,8 @@ MIDDLEWARE = [
 
 #
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'crm1.urls'
 CORS_ORIGIN_ALLOW_ALL = True
@@ -141,7 +141,7 @@ MEDIA_URL = '/images/'
 
 # 
 
-CSRF_COOKIE_NAME = "XCSRF-TOKEN"
-FROM_EMAIL = 'digest@bytesizearxiv.org'
-SENDGRID_API_KEY = "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"
-FACEBOOK_PIXEL_CODE_ID = '348816040007625'
+# CSRF_COOKIE_NAME = "XCSRF-TOKEN"
+# FROM_EMAIL = 'digest@bytesizearxiv.org'
+# SENDGRID_API_KEY = "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"
+# FACEBOOK_PIXEL_CODE_ID = '348816040007625'
