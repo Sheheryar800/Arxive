@@ -22,6 +22,7 @@ class About extends Component {
           articleData:[],
           loading:false,
           dateState:'',
+          current: "Submit",
       }
     }
 
@@ -75,13 +76,15 @@ class About extends Component {
     }
 
     state = {
-      current: 'Submit',
+      current: "Submit",
       visible: false
     }
-    changeText = (current) => {
+    changeText = (text) => {
 
-        this.setState({ current });
-        };
+        this.setState({ 
+          current : text,
+        });
+    };
     showDrawer = () => {
       this.setState({
         visible: true,
@@ -94,7 +97,8 @@ class About extends Component {
     };
     render() {
         const { current, articleData } = this.state
-        console.log("data",articleData);
+        // console.log("data",articleData);
+        console.log("btn:",current);
       return (
         <Layout className="layout">
           <Header className="header-bar">
@@ -164,7 +168,8 @@ class About extends Component {
                             variant='outlined'
                             type="primary"
                             htmlType="submit"
-                            onClick={ () => { this.changeText("Submitted!")}  }> {current}
+                            onClick={ () => { this.changeText("Submitted!")}  }> {current} 
+                            
                         </Button>
                     </Form>
                 </Col>

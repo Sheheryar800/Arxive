@@ -269,7 +269,7 @@ def get_stored_categories(request):
                           'Computer Science',
                           'Quantitative Biology', 'Quantitative Finance', 'Statistics',
                           'Electrical Engineering and System Sciences', 'Economics']:
-        articles = Categories.objects.filter(main_category=main_category).values('slug', 'category', 'main_category')
+        articles = Categories.objects.filter(main_category=main_category).distinct().values('slug', 'category', 'main_category')
         data[main_category] = list(articles)
     return JsonResponse({"articles": data})
 

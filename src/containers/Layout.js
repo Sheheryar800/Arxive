@@ -108,13 +108,13 @@ class CustomLayout extends Component {
 
     if( this.state.width <= 770 ){
       this.setState({
-        collapsed: !this.state.collapsed,
+        // collapsed: !this.state.collapsed,
         layoutMarginTop:{marginTop:'80px'},
       });
       console.log("lesser");
     }else{
       this.setState({
-        collapsed: this.state.collapsed,
+        // collapsed: this.state.collapsed,
         layoutMarginTop:{marginTop:'65px'},
       });
       console.log("greater");
